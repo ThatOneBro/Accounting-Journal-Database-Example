@@ -393,10 +393,10 @@ app.post('/viewrequest', function(req, res){
 				else if (sort == sortByOptions[2] || sort == sortByOptions[3] || sort == sortByOptions[4]){
 					
 					//Checks if the date was properly received
-					if (req.body.specifiedDate){
+					if (req.body['specified-date']){
 						
 						//Defines our specified date as a shorthand variable
-						var comparisonDate = req.body.specifiedDate; 
+						var comparisonDate = req.body['specified-date']; 
 						
 						//Query for On Date
 						if (sort == sortByOptions[2]){
