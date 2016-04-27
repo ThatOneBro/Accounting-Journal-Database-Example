@@ -1,6 +1,6 @@
 {
   "name": "journal_database_ex_df",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A database example for general ledger journal entries.",
   "main": "app.js",
   "dependencies": {
