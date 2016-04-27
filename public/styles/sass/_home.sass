@@ -1,0 +1,132 @@
+.home-body
+    background: darken(white, 8%)
+    color: $darker-gray
+    
+    input[type="number"], input[type="date"], select
+        color: $darker-gray
+        height: 40px
+    
+    input[type="date"]::-webkit-inner-spin-button
+        display: none
+        webkit-appearance: none
+    
+    .header-home
+        overflow: auto
+        text-align: left
+        background: white
+        padding: 25px 0
+        position: relative
+        margin: 0
+        box-shadow: $lighter-shadow
+
+        .logout
+            float: right
+            display: inline-block
+            margin: 15px 20px 0 0
+
+        h1
+            font-size: 40px
+            letter-spacing: 2px
+            color: $steel-blue
+            margin: 0 0 0 25px
+            padding: 10px
+            max-width: 80%
+            display: inline-block
+
+    .form-wrapper
+        background: white
+        margin: 100px auto
+        max-width: 1000px
+        text-align: center
+        box-shadow: $lighter-shadow
+
+        .form-buttons
+            padding: 40px 0
+            
+            .form-button
+                margin-right: 5px
+                
+                &:last-child
+                    margin-right:0
+        
+        #datafield
+            display: inline-block
+            margin: 0 auto
+            
+            #gend-form
+                display: inline-block
+                text-align: justify
+                position: relative
+                padding: 0 0 1px 15px
+                margin: 0 auto
+                
+                .input-wrap
+                    max-width: 400px
+                    display: flex
+                    flex-direction: column
+                    margin-bottom: 40px
+                    
+                    #sort-by
+                        margin-bottom: 15px
+                
+                .entry-date-wrap
+                    margin: 0 0 30px
+                    display: flex
+                    flex-direction: column
+                    max-width: 200px
+                    
+                    #entry-date
+                        width: auto
+                        margin-top: 10px
+                
+                .entry-lines-wrap
+                    margin-bottom: 40px
+                    
+                    .entry-line
+                        display: flex
+                        justify-content: just
+                        
+                        .line-fields
+                            padding: 15px 10px
+                            border: none
+                        
+                        .add-remove-wrap
+                            display: flex
+                            justify-content: flex-start
+                            width:120px
+                            
+                            .button
+                                font-size: 32px
+                                font-weight: 700
+                                width: 50px
+                                margin: 15px 10px 15px 0
+                                padding: 0
+                                
+                            .remove-button
+                                font-size: 34px
+                                background: lighten($lighter-gray, 30%)
+                                border: lighten($lighter-gray, 20%)
+                                
+                                &:hover
+                                    background: lighten($lighter-gray, 20%)
+                        
+                        input[type="number"], select
+                            margin: 0
+                            padding: 0
+                        
+                        select
+                            margin-right: 10px
+                            
+                        input[type="radio"]
+                            margin-right: 5px
+                        
+                        label
+                            display: inline-block
+                            margin-right: 10px
+                
+                #submit
+                    margin: 30px 0
+                    
+                    &.centered
+                        display: block
+                        margin: 20px auto

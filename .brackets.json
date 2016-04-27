@@ -1,0 +1,12 @@
+{
+  "path": {
+    "public/styles/main.sass": {
+      "sass.enabled": true,
+      "sass.options": {
+        "imagePath": null,
+        "sourceComments": "map",
+        "outputStyle": "nested"
+      }
+    }
+  }
+}

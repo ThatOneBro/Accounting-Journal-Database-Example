@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Data Entry Home</title>
+	<link rel="stylesheet" type="text/css" href="styles/style_home.css">
+	<script type="text/javascript">
+		//Global Variables; see loadForm()
+		var formSpace;
+		var entryButton;
+		var viewButton;
+		var clearButton;
+		
+		//Current Date and Format
+		var today = new Date();
+		var mm = today.getMonth() + 1;
+		var dd = today.getDate();
+		var yyyy = today.getFullYear();
+		if (mm < 10){
+			mm = "0" + mm;
+		}
+		if (dd < 10){
+			dd = "0" + dd;
+		}
+		var currentDate = yyyy + mm + "-" + dd + "-";
+		
+		//List of Journal Accounts; see 'account' element in makeEntryForm()
+		var accountList = ["Cash","Prepaid Insurance","Inventory","Supplies","Land","Equipment","Accounts Receivable","Notes Payable","Accounts Payable","Unearned Revenue","Common Stock","Paid-in Capital"];
+		
+		//Global Counter
+		var i = 0;
+		
+		//Post-Load Definitions
+		function loadForm(){
+			formSpace = document.getElementById("datafield");
+			entryButton = document.getElementById("make");
+			viewButton = document.getElementById("view");
+			clearButton = document.getElementById("clear");
+		}
+		
+		//Label Creator for Forms
+		function createLabel(ele, eleLabel, elePar){
+			var newLabel = document.createElement("label");
+			newLabel.htmlFor = ele.id;
+			newLabel.innerHTML = eleLabel;
+			elePar.appendChild(newLabel);
+		}
+		
+		function createSelectOptions(optionsList, selectEle){
+			for (var c = 0; c < optionsList.length; c++) {
+				var option = document.createElement("option");
+				option.value = optionsList[c];
+				option.text = optionsList[c];
+				selectEle.appendChild(option);
+			}
+		}
+		
+		function makeEntryForm(){
+		
+			var f;
+			
+			if (i == 0){
+				clearButton.disabled = false;
+				viewButton.disabled = true;
+				entryButton.disabled = true;
+			
+				formSpace.innerHTML = "Use this form to enter your journal entry: <br>";
+				
+				f = document.createElement("form");
+				f.name = "gendForm";
+				f.id = "gendForm";
+				f.action = "/submit";
+				f.method = "post";
+				f.onsubmit = function(){return validateEquality()};
+				formSpace.appendChild(f);
+			
+				var entryDate = document.createElement("input");
+				entryDate.type = "date";
+				entryDate.name = "entryDate";
+				entryDate.id = "entryDate";
+				entryDate.min = "2012-01-01";
+				entryDate.max = currentDate;
+				entryDate.required = "required";
+				
+				createLabel(entryDate, "Date of Entry: ", f);
+				f.appendChild(document.createElement("br"));
+				f.appendChild(entryDate);
+				f.appendChild(document.createElement("br"));
+			}
+			
+			else {
+				f = document.getElementById("gendForm");
+				f.removeChild(document.getElementById("submit"));
+				removeLastBreak(f);
+				f.appendChild(document.createElement("br"));
+				removeOldAdd(i - 1);
+				removeOldRemove(i - 1);
+			}
+				
+			var dr = document.createElement("input");
+			var cr = document.createElement("input");
+			var account = document.createElement("select");
+			var amount = document.createElement("input");
+			
+			dr.type = "radio";
+			dr.name = "group" + i;
+			dr.id = "debit" + i;
+			dr.value = "debit";
+			dr.checked = "checked";
+			dr.required = "required";
+			
+			cr.type = "radio";
+			cr.name = "group" + i;
+			cr.id = "credit" + i;
+			cr.value = "credit";
+			cr.required = "required";
+			
+			account.name = "account";
+			account.id = "account" + i;
+			account.required = "required";
+			createSelectOptions(accountList, account);
+			
+			amount.type = "number";
+			amount.name = "amount";
+			amount.id = "amount" + i;
+			amount.min = "1";
+			amount.placeholder = "Enter amount";
+			amount.required = "required";
+		
+			createLabel(dr, "Debit: ", f);
+			f.appendChild(dr);
+			
+			createLabel(cr, "Credit: ", f);
+			f.appendChild(cr);
+			
+			createLabel(account, "Account: ", f);
+			f.appendChild(account);
+			
+			createLabel(amount, "Amount ($): ", f);
+			f.appendChild(amount);
+			
+			createAdd();
+			
+			if (i > 0) {
+				createRemove();
+			}
+			
+			f.appendChild(document.createElement("br"));
+			createSubmit();
+			
+			i++;
+		}
+		
+		//Add Button
+		function createAdd(){
+			var addLine = document.createElement("input");
+			var f = document.getElementById("gendForm");
+			
+			addLine.type = "button";
+			addLine.name = "addLine";
+			addLine.id = "addLine" + i;
+			addLine.value = "+";
+			addLine.onclick = function(){makeEntryForm()};
+			f.appendChild(addLine);
+		}
+
+		//Remove Button
+		function createRemove(){
+			var removeLine = document.createElement("input");
+			var f = document.getElementById("gendForm");
+		
+			removeLine.type = "button";
+			removeLine.name = "removeLine";
+			removeLine.id = "removeLine" + i;
+			removeLine.value = "-"
+			removeLine.onclick = function(){clearLine(i - 1)};
+			f.appendChild(removeLine);
+		}
+		
+		//Submit Button
+		function createSubmit(){
+			var submit = document.createElement("input");
+			var f  = document.getElementById("gendForm");
+			
+			submit.type = "submit";
+			submit.name = "submit";
+			submit.id = "submit";
+			submit.value = "Submit";
+			f.appendChild(submit);
+		}
+		
+		//Removes Add Button from Previous Row
+		function removeOldAdd(valueToRemove){
+			var oldAdd = document.getElementById("addLine" + valueToRemove);
+			document.getElementById("gendForm").removeChild(oldAdd);
+		}
+		
+		//Removes the Remove Button from Previous Row
+		function removeOldRemove(valueToRemove){
+			var oldRemove = document.getElementById("removeLine" + valueToRemove);
+			if (oldRemove != null){
+				document.getElementById("gendForm").removeChild(oldRemove);
+			}
+			else {
+				return 0;
+			}
+		}
+		
+		//Removes Most Recent Break
+		function removeLastBreak(par){
+			var allBreaks = document.getElementsByTagName("br");
+			if (allBreaks){
+				var breaksLength = allBreaks.length - 1;
+				var breakToRemove = allBreaks[breaksLength];
+				par.removeChild(breakToRemove);
+			}
+			else {
+				return 0;
+			}
+		}
+		
+		//Clears Current Line
+		function clearLine(valueToRemove){
+		
+			//Grabs Elements in Line
+			var f = document.getElementById("gendForm"); 
+			var drToRemove = document.getElementById("debit" + valueToRemove);
+			var crToRemove = document.getElementById("credit" + valueToRemove);
+			var acctToRemove = document.getElementById("account" + valueToRemove);
+			var amountToRemove = document.getElementById("amount" + valueToRemove);
+			
+			//Grabs All Labels
+			var allLabels = document.getElementsByTagName("label");
+			
+			//Searches Specific Labels by the 'for' Attribute
+			var lookup = {};
+			var label;
+			
+			for (c = 0; c < allLabels.length; c++){
+				label = allLabels[c];
+				if (document.getElementById(label.htmlFor)){
+					lookup[label.htmlFor] = label;
+				}
+			}
+			
+			//Function to Remove Label by Element
+			function removeLabel(toRemove){
+				var labelToRemove = lookup[toRemove.id]; //Calls lookup
+				f.removeChild(labelToRemove); //Removes label from Parent Form
+			}
+			
+			//Removes Labels and Elements from Line
+			removeLabel(drToRemove);
+			f.removeChild(drToRemove);
+			
+			removeLabel(crToRemove);
+			f.removeChild(crToRemove);
+			
+			removeLabel(acctToRemove);
+			f.removeChild(acctToRemove);
+			
+			removeLabel(amountToRemove);
+			f.removeChild(amountToRemove);
+			
+			removeOldAdd(valueToRemove);
+			removeOldRemove(valueToRemove);
+			
+			//Removes Submit
+			removeLastBreak(f); //Removes Last Break on the Page
+			f.removeChild(document.getElementById("submit")); //Removes Submit Button from Form
+			removeLastBreak(f); //Removes last break to allow for Add and Remove Buttons to be recreated
+					
+			i--; //Decrements Counter to match up with Current Line
+			
+			//If Not on Line 0, Creates Both Add and Remove Buttons
+			if (i > 1){
+				i--; //Decrements once more in order to match with Elements on Previous Line
+				createAdd();
+				createRemove();
+				i++; //Increments 'i' to match with Next Line to be created
+			}
+			
+			//If on Line 0, Only Creates Add Button
+			else {
+				i--;
+				createAdd();
+				i++;
+			}
+		
+			f.appendChild(document.createElement("br")); //Line break before re-creating Submit
+			createSubmit(); //Re-create Submit
+		}
+
+		function makeViewForm(){
+				clearButton.disabled = false;
+				entryButton.disabled = true;
+				viewButton.disabled = true;
+				
+				formSpace.innerHTML = "Choose how you would like your data displayed: ";
+				
+				var f = document.createElement("form");
+				f.name = "gendForm";
+				f.id = "gendForm";
+				f.action = "/viewrequest";
+				f.method = "post";
+				formSpace.appendChild(f);
+				
+				var sortList = ["Ascending By Date","Descending By Date","Entries On Specified Date","Entries Before Date","Entries After Date","Specific Account Balance"];
+				
+				var sortBy = document.createElement("select");
+				sortBy.name = "sortBy";
+				sortBy.id = "sortBy";
+				sortBy.onchange = function(){changeNextSelect(sortList)};
+				createSelectOptions(sortList, sortBy);
+				f.appendChild(sortBy);
+				
+				f.appendChild(document.createElement("br"));
+				createSubmit();
+		}
+		
+		function changeNextSelect(selectList){
+			var f = document.getElementById("gendForm");
+			
+			if (sortBy.value == selectList[0] || sortBy.value == selectList[1]){
+				if (document.getElementById("specifiedDate")){
+					var dateToRemove = document.getElementById("specifiedDate");
+					f.removeChild(dateToRemove);
+					removeLastBreak(f);
+					f.removeChild(document.getElementById("submit"));
+					removeLastBreak(f);
+				}
+				if (document.getElementById("accountSelect")){
+					var selectToRemove = document.getElementById("accountSelect");
+					f.removeChild(selectToRemove);
+					removeLastBreak(f);
+					f.removeChild(document.getElementById("submit"));
+					removeLastBreak(f);
+				}
+				if (document.getElementById("submit")){
+					return;
+				}
+				else {
+					f.appendChild(document.createElement("br"));
+					createSubmit();
+				}
+			}
+			
+			else {
+				if (document.getElementById("submit")){
+					f.removeChild(document.getElementById("submit"));
+					removeLastBreak(f);
+				}
+				if (sortBy.value == selectList[2] || sortBy.value == selectList[3] || sortBy.value == selectList[4]){
+					if (document.getElementById("accountSelect")){
+						var selectToRemove = document.getElementById("accountSelect");
+						f.removeChild(selectToRemove);
+						removeLastBreak(f);
+					}
+					if (!document.getElementById("specifiedDate")){
+						f.appendChild(document.createElement("br"));
+						
+						var specifiedDate = document.createElement("input");
+						specifiedDate.type = "date";
+						specifiedDate.name = "specifiedDate";
+						specifiedDate.id = "specifiedDate";
+						specifiedDate.min = "2012-01-01";
+						specifiedDate.max = currentDate;
+						specifiedDate.required = "required";
+						f.appendChild(specifiedDate);
+					}
+					f.appendChild(document.createElement("br"));
+					createSubmit();
+				}
+				else {
+					if (document.getElementById("specifiedDate")){
+						var dateToRemove = document.getElementById("specifiedDate");
+						f.removeChild(dateToRemove);
+						removeLastBreak(f);
+					}
+					f.appendChild(document.createElement("br"));
+					
+					var accountSelect = document.createElement("select");
+					accountSelect.name = "accountSelect";
+					accountSelect.id = "accountSelect";
+					createSelectOptions(accountList, accountSelect);
+					f.appendChild(accountSelect);
+					
+					f.appendChild(document.createElement("br"));
+					createSubmit();
+				}
+			} 
+		}
+		
+		function clearForm(){
+			var f = document.getElementById("gendForm");
+			formSpace.removeChild(f);
+			formSpace.innerHTML = "";
+			
+			i = 0;
+			
+			entryButton.disabled = false;
+			viewButton.disabled = false;
+			clearButton.disabled = true;
+		}
+		
+		function validateEquality() {
+			var f = document.getElementById("gendForm");	
+			var row0 = document.getElementById("account0").value;
+			if (document.getElementById("account1")){
+				var row1 = document.getElementById("account1").value;
+			}
+			else {
+				alert('Please add more than one account to the entry.');
+				return false;
+			}
+			
+			if (i == 2 && row0 == row1){
+				alert("Please ensure that the entry is valid.");
+				return false;
+			}
+			
+			else {
+				var drOrCr = [];
+				for (a = 0; a < i; a++){
+					var currentGroup = "group" + a;
+					
+					if (currentGroup){
+						var groupArray = document.getElementsByName(currentGroup);
+						
+						for (l = 0; l < groupArray.length; l++){
+							var currentOption = groupArray[l];
+							
+							if (currentOption.checked == true){
+								drOrCr.push(currentOption.value);
+								break;
+							}
+							else {
+								continue;
+							}
+						}
+					}
+				}
+				
+				var totalDebits = 0;
+				var totalCredits = 0;
+				
+				for (c = 0; c < i; c++){
+					var currentAmount = document.getElementById("amount" + c).value;
+				
+					if (drOrCr[c] == "debit"){
+						totalDebits = totalDebits + parseInt(currentAmount);
+					}
+					
+					else {
+						totalCredits = totalCredits + parseInt(currentAmount);
+					}
+				}
+				
+				if (totalDebits == totalCredits){
+					return true;
+				}
+				
+				else {
+					alert("Please ensure that debits equal credits.");
+					return false;
+				}
+			}
+		}
+	</script>
+</head>
+
+<body onload="loadForm()">
+	<div id="logout">
+		<a href="/logout"> Logout </a>
+	</div>
+	<h1>Journal Database</h1>
+	<div id="buttons">
+		<input type="button" id="make" value="Make Entry" onclick="makeEntryForm()">
+		<input type="button" id="view" value="View Data" onclick="makeViewForm()">
+		<input type="button" id="clear" value="Clear Form" onclick="clearForm()" disabled>
+	</div>
+	<div id="datafield">
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Journal Database | Home</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	
+	<script type="text/javascript" src="scripts/global.js"></script>
+	<script type="text/javascript" src="scripts/entry-form.js"></script>
+	<script type="text/javascript" src="scripts/entry-support.js"></script>
+	<script type="text/javascript" src="scripts/clear-line.js"></script>
+	<script type="text/javascript" src="scripts/view-form.js"></script>
+	<script type="text/javascript" src="scripts/view-support.js"></script>
+	<script type="text/javascript" src="scripts/clear-form.js"></script>
+	<script type="text/javascript" src="scripts/validate-equality.js"></script>
+</head>
+
+<body class="home-body" onload="loadForm()">
+	<header class="header-home">
+		<h1>Journal Database</h1>
+		<div class="logout">
+			<a class="button logout-button" href="/logout">Logout</a>
+        </div>
+    </header>
+    <div class="form-wrapper" id="form-wrapper">
+        <div class="form-buttons">
+            <input type="button" id="make" class="button form-button" value="Make Entry" onclick="makeEntryForm()">
+            <input type="button" id="view" class="button form-button" value="View Data" onclick="makeViewForm()">
+            <input type="button" id="clear" class="button form-button" value="Clear Form" onclick="clearForm()" disabled>
+		</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,757 @@
+/*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+/* line 8, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 18, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+/* line 42, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+article,
+aside,
+details, figcaption,
+figure,
+footer,
+header,
+main, menu,
+nav,
+section,
+summary {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 53, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 61, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 70, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+/* line 80, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+template, [hidden] {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+/* line 91, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+a {
+  background-color: transparent; }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+/* line 101, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 113, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 124, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 133, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 141, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 150, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 159, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 168, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 178, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 185, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 189, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 200, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 208, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 223, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 232, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 241, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Change font properties to `inherit` in all browsers (opinionated).
+ */
+/* line 257, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font: inherit; }
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+/* line 265, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+optgroup {
+  font-weight: bold; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ * 2. Show the overflow in Edge, Firefox, and IE.
+ */
+/* line 277, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+button,
+input, select {
+  /* 2 */
+  overflow: visible; }
+
+/**
+ * Remove the margin in Safari.
+ * 1. Remove the margin in Firefox and Safari.
+ */
+/* line 289, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  /* 1 */
+  margin: 0; }
+
+/**
+ * Remove the inheritence of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritence of text transform in Firefox.
+ */
+/* line 299, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Change the cursor in all browsers (opinionated).
+ */
+/* line 310, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer; }
+
+/**
+ * Restore the default cursor to disabled elements unset by the previous rule.
+ */
+/* line 318, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+[disabled] {
+  cursor: default; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS.
+ */
+/* line 331, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+button,
+html [type="button"], [type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 340, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 350, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+button:-moz-focusring,
+input:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/* line 358, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 371, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 384, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 394, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 404, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * Correct the odd appearance of search inputs in Chrome and Safari.
+ */
+/* line 412, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+[type="search"] {
+  -webkit-appearance: textfield; }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome on OS X and
+ * Safari on OS X.
+ */
+/* line 422, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_normalize.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/* line 1, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_links.sass */
+a {
+  color: #0074D9;
+  text-decoration: none;
+  outline: 0; }
+  /* line 7, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_links.sass */
+  a:hover,
+  a:focus {
+    color: #40a6ff; }
+
+/* line 5, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_buttons.sass */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #00b2ee;
+  border-radius: 4px;
+  border: 1px solid #008cbb;
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear; }
+  /* line 21, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_buttons.sass */
+  .button:hover,
+  button:hover,
+  input[type="submit"]:hover,
+  input[type="reset"]:hover,
+  input[type="button"]:hover {
+    color: white;
+    background: #008cbb; }
+  /* line 25, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_buttons.sass */
+  .button:disabled,
+  button:disabled,
+  input[type="submit"]:disabled,
+  input[type="reset"]:disabled,
+  input[type="button"]:disabled {
+    background: silver;
+    border: solid 1px #b4b3b3;
+    cursor: default; }
+
+/* line 2, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_number-inputs.sass */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+/* line 1, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+body {
+  font-family: 'Montserrat'; }
+  /* line 4, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+  body .index-header {
+    text-align: center; }
+    /* line 7, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+    body .index-header h1 {
+      font-size: 60px;
+      font-weight: 700;
+      color: #236B8E;
+      margin: 50px auto;
+      line-height: 1; }
+  /* line 15, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+  body .login {
+    padding-bottom: 50px; }
+    /* line 18, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+    body .login fieldset {
+      width: 10%;
+      margin: 0 auto;
+      padding: 30px;
+      color: #414040;
+      box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.2); }
+      /* line 25, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+      body .login fieldset label {
+        font-size: 18px; }
+      /* line 29, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+      body .login fieldset input {
+        margin: 10px 0 10px; }
+        /* line 32, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+        body .login fieldset input[type="text"], body .login fieldset input[type="password"] {
+          padding: 10px 5px;
+          margin-bottom: 15px;
+          color: #5b5959; }
+        /* line 37, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+        body .login fieldset input[type="submit"] {
+          margin: 15px 0 0;
+          width: 100%;
+          padding: 10px 0; }
+  /* line 42, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+  body .page-break {
+    width: 80%;
+    margin: 0 auto; }
+  /* line 46, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+  body .info {
+    margin: 50px auto 0;
+    color: #414040;
+    line-height: 2;
+    max-width: 600px;
+    text-align: center; }
+    /* line 53, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+    body .info h2, body .info strong, body .info th {
+      color: #2e2e2e; }
+    /* line 56, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+    body .info .login-info {
+      margin-bottom: 20px; }
+      /* line 59, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+      body .info .login-info h2 {
+        font-size: 40px;
+        margin: 0 auto 25px;
+        line-height: 1; }
+      /* line 64, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+      body .info .login-info .login-wrapper {
+        margin: 0 auto;
+        width: 300px;
+        position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        /* line 71, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+        body .info .login-info .login-wrapper .col {
+          -webkit-box-flex: 1;
+          -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+          flex-grow: 1; }
+          /* line 74, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+          body .info .login-info .login-wrapper .col .login-heading, body .info .login-info .login-wrapper .col .login-data {
+            border: solid #c0c0c0 1px; }
+          /* line 77, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+          body .info .login-info .login-wrapper .col .login-heading {
+            margin-bottom: 0px;
+            border-bottom: none; }
+          /* line 81, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+          body .info .login-info .login-wrapper .col .login-data {
+            margin-top: 0px;
+            box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.2);
+            font-size: 18px; }
+          /* line 86, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+          body .info .login-info .login-wrapper .col .no-right {
+            border-right: none; }
+    /* line 89, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_index.sass */
+    body .info .project-description {
+      margin: 40px 0 0; }
+
+/* line 1, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+.home-body {
+  background: #ebebeb;
+  color: #2e2e2e; }
+  /* line 5, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+  .home-body input[type="number"], .home-body input[type="date"], .home-body select {
+    color: #2e2e2e;
+    height: 40px; }
+  /* line 9, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+  .home-body input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+    webkit-appearance: none; }
+  /* line 13, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+  .home-body .header-home {
+    overflow: auto;
+    text-align: left;
+    background: white;
+    padding: 25px 0;
+    position: relative;
+    margin: 0;
+    box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.1); }
+    /* line 22, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+    .home-body .header-home .logout {
+      float: right;
+      display: inline-block;
+      margin: 15px 20px 0 0; }
+    /* line 27, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+    .home-body .header-home h1 {
+      font-size: 40px;
+      letter-spacing: 2px;
+      color: #236B8E;
+      margin: 0 0 0 25px;
+      padding: 10px;
+      max-width: 80%;
+      display: inline-block; }
+  /* line 36, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+  .home-body .form-wrapper {
+    background: white;
+    margin: 100px auto;
+    max-width: 1000px;
+    text-align: center;
+    box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.1); }
+    /* line 43, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+    .home-body .form-wrapper .form-buttons {
+      padding: 40px 0; }
+      /* line 46, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+      .home-body .form-wrapper .form-buttons .form-button {
+        margin-right: 5px; }
+        /* line 49, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+        .home-body .form-wrapper .form-buttons .form-button:last-child {
+          margin-right: 0; }
+    /* line 52, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+    .home-body .form-wrapper #datafield {
+      display: inline-block;
+      margin: 0 auto; }
+      /* line 56, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+      .home-body .form-wrapper #datafield #gend-form {
+        display: inline-block;
+        text-align: justify;
+        position: relative;
+        padding: 0 0 1px 15px;
+        margin: 0 auto; }
+        /* line 63, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+        .home-body .form-wrapper #datafield #gend-form .input-wrap {
+          max-width: 400px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          margin-bottom: 40px; }
+          /* line 69, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+          .home-body .form-wrapper #datafield #gend-form .input-wrap #sort-by {
+            margin-bottom: 15px; }
+        /* line 72, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+        .home-body .form-wrapper #datafield #gend-form .entry-date-wrap {
+          margin: 0 0 30px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          max-width: 200px; }
+          /* line 78, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+          .home-body .form-wrapper #datafield #gend-form .entry-date-wrap #entry-date {
+            width: auto;
+            margin-top: 10px; }
+        /* line 82, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+        .home-body .form-wrapper #datafield #gend-form .entry-lines-wrap {
+          margin-bottom: 40px; }
+          /* line 85, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+          .home-body .form-wrapper #datafield #gend-form .entry-lines-wrap .entry-line {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: just;
+            -webkit-justify-content: just;
+            -ms-flex-pack: just;
+            justify-content: just; }
+            /* line 89, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+            .home-body .form-wrapper #datafield #gend-form .entry-lines-wrap .entry-line .line-fields {
+              padding: 15px 10px;
+              border: none; }
+            /* line 93, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+            .home-body .form-wrapper #datafield #gend-form .entry-lines-wrap .entry-line .add-remove-wrap {
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-pack: start;
+              -webkit-justify-content: flex-start;
+              -ms-flex-pack: start;
+              justify-content: flex-start;
+              width: 120px; }
+              /* line 98, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+              .home-body .form-wrapper #datafield #gend-form .entry-lines-wrap .entry-line .add-remove-wrap .button {
+                font-size: 32px;
+                font-weight: 700;
+                width: 50px;
+                margin: 15px 10px 15px 0;
+                padding: 0; }
+              /* line 105, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+              .home-body .form-wrapper #datafield #gend-form .entry-lines-wrap .entry-line .add-remove-wrap .remove-button {
+                font-size: 34px;
+                background: #8e8c8c;
+                border: #747373; }
+                /* line 110, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+                .home-body .form-wrapper #datafield #gend-form .entry-lines-wrap .entry-line .add-remove-wrap .remove-button:hover {
+                  background: #747373; }
+            /* line 113, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+            .home-body .form-wrapper #datafield #gend-form .entry-lines-wrap .entry-line input[type="number"], .home-body .form-wrapper #datafield #gend-form .entry-lines-wrap .entry-line select {
+              margin: 0;
+              padding: 0; }
+            /* line 117, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+            .home-body .form-wrapper #datafield #gend-form .entry-lines-wrap .entry-line select {
+              margin-right: 10px; }
+            /* line 120, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+            .home-body .form-wrapper #datafield #gend-form .entry-lines-wrap .entry-line input[type="radio"] {
+              margin-right: 5px; }
+            /* line 123, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+            .home-body .form-wrapper #datafield #gend-form .entry-lines-wrap .entry-line label {
+              display: inline-block;
+              margin-right: 10px; }
+        /* line 127, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+        .home-body .form-wrapper #datafield #gend-form #submit {
+          margin: 30px 0; }
+          /* line 130, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_home.sass */
+          .home-body .form-wrapper #datafield #gend-form #submit.centered {
+            display: block;
+            margin: 20px auto; }
+
+/* line 1, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_query.sass */
+.query-wrap {
+  text-align: center;
+  background: #ebebeb;
+  overflow: hidden; }
+  /* line 6, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_query.sass */
+  .query-wrap h1 {
+    color: #236B8E;
+    font-size: 40px;
+    margin: 0 auto 80px;
+    background: white;
+    padding: 40px 0;
+    box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.1); }
+  /* line 14, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_query.sass */
+  .query-wrap table {
+    padding: 20px 10px;
+    background: white;
+    margin: 0 auto;
+    color: #414040;
+    box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse; }
+  /* line 22, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_query.sass */
+  .query-wrap table, .query-wrap th, .query-wrap td {
+    border: solid #a7a6a6 2px; }
+    /* line 25, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_query.sass */
+    .query-wrap table th, .query-wrap th th, .query-wrap td th {
+      font-size: 20px; }
+    /* line 28, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_query.sass */
+    .query-wrap table th, .query-wrap table td, .query-wrap th th, .query-wrap th td, .query-wrap td th, .query-wrap td td {
+      text-align: justify;
+      padding: 10px 15px; }
+      /* line 32, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_query.sass */
+      .query-wrap table th:first-letter, .query-wrap table td:first-letter, .query-wrap th th:first-letter, .query-wrap th td:first-letter, .query-wrap td th:first-letter, .query-wrap td td:first-letter {
+        text-transform: uppercase; }
+  /* line 35, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_query.sass */
+  .query-wrap .home-button-wrap {
+    background: white;
+    margin-top: 80px; }
+    /* line 39, C:/Users/Derrick/Desktop/Node Test/public/styles/sass/_query.sass */
+    .query-wrap .home-button-wrap .home-button {
+      display: inline-block;
+      margin: 40px auto;
+      width: 200px;
+      padding: 15px; }

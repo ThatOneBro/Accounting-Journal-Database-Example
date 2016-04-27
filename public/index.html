@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Journal Database | Login</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<script type="text/javascript">
+		//Converts All Characters to Lower Case for Username
+		function preProcess(){
+			var username = document.getElementById("user");
+			username.value = username.value.toLowerCase();
+		}
+	</script>
+</head>
+
+<body>
+    <header class="index-header">
+        <h1 class="title">Database Login</h1>
+    </header>
+	<div class="login">
+		<form name="loginform" action="/login" onsubmit="preProcess()" method="post">
+			<fieldset>
+				<label for="user">Username:</label>
+				<input type="text" id="user" name="user" placeholder="Enter your username" required>
+			
+				<label for="pass">Password:</label>
+				<input type ="password" id="pass" name="pass" placeholder="Enter your password" required>
+		
+				<input type="submit" value="Login">
+			</fieldset>
+		</form>
+	</div>
+	<hr class="page-break" />
+	<div class="info">
+		<div class="login-info">
+            <h2>Login Information:</h2>
+            <div class="login-wrapper">
+                <div class="col col1">
+                    <h3 class="login-heading no-right">Username</h3>
+                    <p class="login-data no-right username">admin</p>
+                </div>
+                    
+                <div class="column-break"></div>   
+                
+                <div class="col col2">
+                    <h3 class="login-heading">Password</h3>
+                    <p class="login-data password">password123</p>
+                </div>
+            </div>
+		</div>
+		<div class="project-description">
+			<strong class="chrome-alert">For best performance use Google Chrome.</strong>
+			
+			<p class="npm-info">Commented project files available publicly via Node Package Manager: <br/>
+			    <code>> npm install journal_database_ex_df@latest </code>
+            </p>
+        </div>
+	</div>
+</body>
+</html>

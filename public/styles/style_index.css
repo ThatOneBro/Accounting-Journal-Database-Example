@@ -1,0 +1,58 @@
+body {
+	font-family: Myriad;
+	text-align: center;
+}
+
+.title {
+	background-color: darkblue;
+	display: inline-block;
+	font-family: Helvetica;
+	border-radius: 10px;
+	color: white;
+	border: 3px solid black;
+	padding: 20px;
+}
+
+fieldset {
+	margin-top: 20px;
+	background-color: lightgray;
+	position: absolute;
+	border: 2px solid black;
+}
+
+input[type="text"], input[type="password"] {
+	margin-right: 15px;
+}
+
+div.login {
+	display: inline-block;
+	width: 600px;
+	height: 300px;
+}
+
+div.info {
+	width: 60%;
+	margin: auto;
+	position: static;
+	vertical-align: middle;
+}
+
+table {
+	display: inline-block;
+	border-collapse: collapse;
+	background-color: white;
+}
+
+th, td {
+	padding: 5px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+th {
+	background-color: lightgray;
+}
+
+p.npm {
+	margin-top: 50px;
+}

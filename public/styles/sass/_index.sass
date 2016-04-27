@@ -1,0 +1,92 @@
+body
+    font-family: 'Montserrat'
+    
+    .index-header
+        text-align: center
+        
+        h1
+            font:
+                size: 60px
+                weight: 700
+            color: $steel-blue
+            margin: 50px auto
+            line-height: 1
+            
+    .login
+        padding-bottom: 50px
+        
+        fieldset
+            width: 10%
+            margin: 0 auto
+            padding: 30px
+            color: $lighter-gray
+            box-shadow: $darker-shadow
+
+            label
+                font:
+                    size: 18px
+
+            input
+                margin: 10px 0 10px
+
+                &[type="text"], &[type="password"]
+                    padding: 10px 5px
+                    margin-bottom: 15px
+                    color: lighten($lighter-gray, 10%)
+
+                &[type="submit"]
+                    margin: 15px 0 0
+                    width: 100%
+                    padding: 10px 0
+    
+    .page-break
+        width: 80%
+        margin: 0 auto
+    
+    .info
+        margin: 50px auto 0
+        color: $lighter-gray
+        line-height: 2
+        max-width: 600px
+        text-align: center
+        
+        h2, strong, th
+            color: $darker-gray
+            
+        .login-info
+            margin-bottom: 20px
+            
+            h2
+                font-size: 40px
+                margin: 0 auto 25px
+                line-height: 1
+            
+            .login-wrapper
+                margin: 0 auto
+                width: 300px
+                position: relative
+                display: flex
+                justify-content: space-between
+               
+                .col
+                    flex-grow: 1
+                    
+                    .login-heading, .login-data
+                        border: solid #c0c0c0 1px
+                    
+                    .login-heading
+                        margin-bottom: 0px
+                        border-bottom: none
+                        
+                    .login-data
+                        margin-top: 0px
+                        box-shadow: $darker-shadow
+                        font-size: 18px
+                    
+                    .no-right
+                        border-right: none
+        
+        .project-description
+            margin: 40px 0 0
+        
+            
