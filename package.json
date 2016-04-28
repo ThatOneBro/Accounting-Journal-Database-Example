@@ -1,7 +1,7 @@
 {
   "name": "journal_database_ex_df",
-  "version": "1.0.4",
-  "description": "A database example for general ledger journal entries.",
+  "version": "1.0.5",
+  "description": "A database example for accounting general ledger journal entries.",
   "main": "app.js",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -13,6 +13,14 @@
     "path": "^0.12.7"
   },
   "files": "journal_db_ex_new.sql",
-  "author": "Derrick Farris",
+  "bugs": {
+      "email": "derrick.c.farris@gmail.com",
+      "url": "https://github.com/ThatOneBro/Accounting-Journal-Database-Example/issues"
+  },
+  "author": {
+      "name": "Derrick Farris",
+      "email": "derrick.c.farris@gmail.com",
+      "url": "http://www.derrickfarris.com"
+  },
   "license": "MIT"
 }
