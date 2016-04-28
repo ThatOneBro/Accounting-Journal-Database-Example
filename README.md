@@ -3,6 +3,7 @@
 This project is an example of a web-based accounting journal entry client with a Node.js/Express and MySQL backend.
 
 If you are unfamiliar with the way accounting journal entries work, here is a guide to making a journal entry:
+
 1. Select a date on or before today.
 2. Add at least one other row to the form. **You need at least one debit and one credit account.**
 3. Flag the second account as credit. *Ex. Debit: Accounts Payable; Credit: Cash*
