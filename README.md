@@ -11,4 +11,4 @@ If you are unfamiliar with the way accounting journal entries work, here is a gu
 
 That's all it takes. If you have any questions feel free to contact me at <mailto:derrick.c.farris@gmail.com>.
 
-Or if you want to see a live version of this project, visit [my website](http://liveprojects.derrickfarris.com "Live Projects")
+Or if you want to see a live version of this project, visit [my website](http://liveprojects.derrickfarris.com "Live Projects").
