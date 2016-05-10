@@ -9,6 +9,7 @@ If you are unfamiliar with the way accounting journal entries work, here is a gu
 3. Flag the second account as credit. *Ex. Debit: Accounts Payable; Credit: Cash*
 4. Ensure that the **sum of all debit amounts equals the sum of all credit amounts.**
 
+
 That's all it takes. If you have any questions feel free to contact me at <mailto:derrick.c.farris@gmail.com>.
 
 Or if you want to see a live version of this project, visit [my website](http://liveprojects.derrickfarris.com "Live Projects").

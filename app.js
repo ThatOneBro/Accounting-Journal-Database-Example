@@ -1,7 +1,7 @@
 ////////////////////////////////////////
-/*//	JOURNAL DATABASE EXAMPLE	//*/
-/*//		VERSION: 1.0.5			//*/
-/*//	AUTHOR: DERRICK FARRIS		//*/
+/*//    JOURNAL DATABASE EXAMPLE    //*/
+/*//        VERSION: 1.0.5          //*/
+/*//    AUTHOR: DERRICK FARRIS      //*/
 ////////////////////////////////////////
 
 //Declares modules as variables
@@ -57,7 +57,7 @@ var sess;
 var sortByOptions = ['Ascending By Date','Descending By Date','Entries On Specified Date','Entries Before Date','Entries After Date','Specific Account Balance'];
 
 ////////////////////////
-//	Root/Login Page	  //
+//   Root/Login Page  //
 ////////////////////////
 app.get('/', function(req, res){
 	
@@ -76,7 +76,7 @@ app.get('/', function(req, res){
 });
 
 ///////////////////////////////////////
-//	Login Request Processing Page	 //
+//  Login Request Processing Page    //
 ///////////////////////////////////////
 app.post('/login', function(req, res){
 	
@@ -156,7 +156,7 @@ app.post('/login', function(req, res){
 });
 
 ///////////////////////////////
-//	Logout Processing Page	 //
+//  Logout Processing Page   //
 ///////////////////////////////
 app.get('/logout', function (req, res){
 	
@@ -176,7 +176,7 @@ app.get('/logout', function (req, res){
 });
 
 ///////////////////
-//	Home Page	 //
+//   Home Page   //
 ///////////////////
 app.get('/home', function(req, res) {
 	sess = req.session;
@@ -202,7 +202,7 @@ app.get('/home', function(req, res) {
 });
 
 //////////////////////////////////
-//	Entry Form Processing Page	//
+//  Entry Form Processing Page  //
 //////////////////////////////////
 app.post('/submit', function(req, res){
 	sess = req.session;
@@ -275,7 +275,7 @@ app.post('/submit', function(req, res){
 });
 
 //////////////////////////
-//	Entry Display Page	//
+//  Entry Display Page  //
 //////////////////////////
 app.get('/submitted', function(req, res){
 	sess = req.session;
@@ -322,7 +322,7 @@ app.get('/submitted', function(req, res){
 });
 
 //////////////////////////////////
-//	View Data Processing Page	//
+//  View Data Processing Page   //
 //////////////////////////////////
 app.post('/viewrequest', function(req, res){
 	sess = req.session;
@@ -547,7 +547,7 @@ app.post('/viewrequest', function(req, res){
 });
 
 /////////////////////////////
-//	View Data Display Page //
+//  View Data Display Page //
 /////////////////////////////
 app.get('/view', function(req, res){
 	sess = req.session;
