@@ -128,11 +128,11 @@ app.post('/login', function(req, res){
                                             res.redirect('/home');
                                         }
 
-                                        //         Deprecated Code          //
+                                        //         Dead Code          //
                                         /*else {
                                             res.sendFile(__dirname +'/public/homenoauth.html');
                                         }*/
-                                        //      End Deprecated Code        //
+                                        //      End Dead Code        //
                                     }
 
                                     //If password does not match, indicate to user that password is incorrect
